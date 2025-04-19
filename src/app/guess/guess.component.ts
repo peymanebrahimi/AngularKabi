@@ -10,7 +10,7 @@ addGuess,
 calcGameState,
   getLatestGuess,
   Guess,
-} from '../models/GameState';
+} from './GameState';
 
 @Component({
   selector: 'app-guess',
