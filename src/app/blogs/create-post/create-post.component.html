@@ -1,0 +1,8 @@
+<label>Title</label>
+<input type="text" placeholder="title" #title />
+
+<label>Content</label>
+<textarea #content></textarea>
+
+<button (click)="onCreateNew(title.value, content.value);
+    title.value=''; content.value='';">Create</button>

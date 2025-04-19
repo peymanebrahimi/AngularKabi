@@ -1,0 +1,8 @@
+<div>
+    @for(post of posts(); track post.id){
+    <div class="post-item">
+        <app-post [post]="post"></app-post>
+        <button (click)="onDeletePost(post)">Delete me</button>
+    </div>
+    }
+</div>
