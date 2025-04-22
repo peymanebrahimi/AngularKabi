@@ -1,11 +1,13 @@
-<h2 routerLink="/">Home</h2>
+<h1 routerLink="/">Movies App</h1>
 
-<div>
-    @for(movie of movies; track movie.id){
-    <div [routerLink]="['movies', movie.id]" routerLinkActive="selected">{{movie.name}}</div>
+<div class="movies-list">
+    @for(movie of movies; track movie.id) {
+    <div class="movie" [routerLink]="[ movie.id]" routerLinkActive="selected">
+        {{movie.name}}
+    </div>
     }
 </div>
 
-<div>
-    <router-outlet></router-outlet>
+<div class="movie-details">
+    <router-outlet />
 </div>

@@ -1,17 +1,3 @@
-@if(movie(); as movie){
-<h2>{{movie.name}}</h2>
-@for(actor of movie.cast; track actor ){
-<p>{{actor}}</p>
-}
-
-
-
-<p>
-    {{movie.description}}
-</p>
-}
-
-<!-- 
 @if (movie(); as movie) {
     <div class="meta">
         <img [src]="poster()" alt="movie.name">
@@ -26,4 +12,4 @@
         {{movie.description}}
     </p>
 
-} -->
+}
