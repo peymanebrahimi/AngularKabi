@@ -6,14 +6,14 @@ import { CommonModule } from '@angular/common';
   selector: 'app-movie-detail',
   imports: [CommonModule],
   templateUrl: './movie-detail.component.html',
-  styleUrl: './movie-detail.component.css'
+  styleUrl: './movie-detail.component.scss'
 })
 export class MovieDetailComponent {
   private movieSerives = inject(MovieService);
 
   id = input.required({ transform: numberAttribute });
 
-  movie = computed(() => this.movieSerives.movies().find(x => x.id === this.id()))
+  readonly movie = computed(() => this.movieSerives.movies().find(x => x.id === this.id()))
 
-  poster = computed(() => `movies/${this.movie()?.posterImage ?? ''}`)
+  readonly poster = computed(() => `movies/${this.movie()?.posterImage }`)
 }
