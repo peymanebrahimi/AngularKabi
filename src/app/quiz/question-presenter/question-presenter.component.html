@@ -1,0 +1,8 @@
+<h2>{{question().caption}}</h2>
+<ul>
+    @for (answer of question().answers; track $index) {
+        <li (click)="selectAnswer($index)">
+            {{answer}}
+        </li>
+    }
+</ul>

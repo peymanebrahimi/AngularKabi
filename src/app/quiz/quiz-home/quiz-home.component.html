@@ -1,0 +1,5 @@
+<app-progressbar [value]="numberOfAnswerd()" [total]="numberOfTotal()"/>
+<app-question-presenter [question]="currentQuestion()" (selectedAnswer)="answerSelected($event)"/>
+
+
+<app-summary [ratio]="ratio()" (restart)="restart()"/>

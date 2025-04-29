@@ -25,7 +25,6 @@ export const routes: Routes = [
         loadComponent: () => import('./twoWay/tow-way-home/tow-way-home.component')
             .then(c => c.TowWayHomeComponent)
     },
-
     {
         path: 'movie',
         loadComponent: () => import('./movies/movie-home/movie-home.component')
@@ -35,5 +34,10 @@ export const routes: Routes = [
         path: 'movie/:id',
         loadComponent: () => import('./movies/movie-detail/movie-detail.component')
             .then(c => c.MovieDetailComponent)
-    }
+    },
+    {
+        path: 'quiz',
+        loadComponent: () => import('./quiz/quiz-home/quiz-home.component')
+            .then(c => c.QuizHomeComponent)
+    },
 ];
